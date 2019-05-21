@@ -14,13 +14,13 @@ int main(int argc, char const *argv[])
 ````
 3. 新建 CMakeLists.txt
 ````cpp demo1/CMakeLists.txt
-cmake_minimum_required(VERSION 3.8) #要求CMake的最低版本为3.8
+cmake_minimum_required(VERSION 3.8) #要求CMake的最低版本为3.8,这行命令是可选的，我们可以不写这句话，但在有些情况下，如果CMakeLists.txt文件中使用了一些高版本Cmake特有的一些命令的时候，就需要加上这样一行，提醒用户升级到该版本之后再执行Cmake
 project(demo1) #指定项目名称为demo1
 add_executable(demo demo1.cpp) #指定生成的可执行文件名和所需源文件 格式: add_executable(生成的可执行文件名 源文件1 源文件2 ...)
 ````
 整个项目内容如下
 
-![](http://images.lolimay.cn/18-8-19/66993297.jpg)
+![](https://images.lolimay.cn/18-8-19/66993297.jpg)
 4. 打开终端 `cd` 到项目根目录
 ````shell lolimay@lolimay-PC: example/cmake/demo1
 mkdir build && cd build #单独创建一个 build 文件夹并 cd 进去
@@ -30,13 +30,13 @@ make -j4 #开 4 个线程去编译项目
 ````
 
 运行结果
-![](http://images.lolimay.cn/18-8-19/39115902.jpg)
+![](https://images.lolimay.cn/18-8-19/39115902.jpg)
 
 #### [点击查看本示例源码](https://github.com/loliMay/deepin-develop-guide/tree/master/example/cmake/demo1)
 
 可能有人会有疑惑，为什么要单独创建一个 build 文件夹，直接就在项目文件夹下 `cmake . && make -j4` 不是更方便吗？是不是多次一举，让我们看看 build 文件夹下的内容
 
-![](http://images.lolimay.cn/18-8-19/44200067.jpg)
+![](https://images.lolimay.cn/18-8-19/44200067.jpg)
 
 ### Out-Of Source 构建原则
 将项目源文件与构建生成的目标文件同放在项目根目录下，会很容易产生混乱，十分不利于项目的管理。因此单独建立一个 build 文件夹专门放置构建生成的目标文件，能够防止项目的源文件被污染，以降低项目维护的成本，这体现了 CMake 的 Out-Of Source 构建原则。
@@ -82,7 +82,7 @@ int main(int argc, char const *argv[])
 
 整个项目内容如下
 
-![](http://images.lolimay.cn/18-8-20/6696068.jpg)
+![](https://images.lolimay.cn/18-8-20/6696068.jpg)
 
 6. 打开终端 `cd` 到项目根目录
 ````shell lolimay@lolimay-PC: example/cmake/demo2
@@ -93,7 +93,7 @@ make -j4 #开 4 个线程去编译项目
 ````
 
 运行结果
-![](http://images.lolimay.cn/18-9-5/32502741.jpg)
+![](https://images.lolimay.cn/18-9-5/32502741.jpg)
 
 #### [点击查看本示例源码](https://github.com/loliMay/deepin-develop-guide/tree/master/example/cmake/demo2)
 

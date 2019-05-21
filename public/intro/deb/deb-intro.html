@@ -24,7 +24,7 @@
   </head>
   <body>
 
-   <script>window.__INITIAL_STATE__ = {"page":{"path":"intro/deb/deb-intro.html","title":""},"data":{"navigation":{"logo":{"text":"deepin开发指南","type":"link","path":"index.html"},"main":[{"type":"label"},{"text":"新手上路","type":"label"},{"text":"起步","type":"link","path":"intro/start.html"},{"text":"创建Deepin示例应用","type":"link","path":"intro/demo.html"},{"text":"CMake入门教程","type":"link","path":"intro/cmake/cmake.html","children":[{"text":"CMake入门","type":"link","path":"intro/cmake/cmake-base.html"},{"text":"CMake实战","type":"link","path":"intro/cmake/cmake-practice.html"}]},{"text":"Deepin Tool Kit","type":"link","path":"intro/dtk.html"},{"text":"API 手册","type":"label"},{"text":"附录","type":"label"},{"text":"desktop文件入门","path":"booklet/desktop.html"},{"text":"deepin常用路径","path":"booklet/path.html"},{"text":"以管理员身份运行你的应用","path":"booklet/polkit.html"},{"text":"在Github上编辑此文档","type":"link","path":"https://github.com/loliMay/deepin-develop-guide"}]}},"config":{"timezone":"UTC","root":"/","time_format":"HH:mm:ss","theme":"doc","theme_config":{"swagger_ui":{"version":2,"permalinks":true,"api_explorer":true,"download":"Download specification","show_extensions":false,"deep_linking":true,"display_operation_id":false,"doc_expansion":"none"},"search":{"skip":false,"background":false,"route":"/lunr.json"},"favicon":"images/favicon.ico"}}}</script>
+   <script>window.__INITIAL_STATE__ = {"page":{"path":"intro/deb/deb-intro.html","title":""},"data":{"navigation":{"logo":{"text":"deepin开发指南","type":"link","path":"index.html"},"main":[{"type":"label"},{"text":"新手上路","type":"label"},{"text":"起步","type":"link","path":"intro/start.html"},{"text":"创建Deepin示例应用","type":"link","path":"intro/demo.html"},{"text":"CMake入门教程","type":"link","path":"intro/cmake/cmake.html","children":[{"text":"CMake入门","type":"link","path":"intro/cmake/cmake-base.html"},{"text":"CMake实战","type":"link","path":"intro/cmake/cmake-practice.html"}]},{"text":"Deepin Tool Kit","type":"link","path":"intro/dtk.html"},{"text":"走近deepin","type":"label"},{"text":"deepin研发心得","type":"link","path":"deepin/R&D/index.html","children":[{"text":"deepin 15.4 研发心得","type":"link","path":"deepin/R&D/15_4/index.html"},{"text":"deepin 15.5 研发心得","type":"link","path":"deepin/R&D/15_5/index.html"},{"text":"deepin 15.7 研发心得","type":"link","path":"deepin/R&D/15_7/index.html"},{"text":"deepin 15.8 研发心得","type":"link","path":"deepin/R&D/15_8/index.html"}]},{"text":"附录","type":"label"},{"text":"desktop文件入门","path":"booklet/desktop.html"},{"text":"deepin常用路径","path":"booklet/path.html"},{"text":"以管理员身份运行你的应用","path":"booklet/polkit.html"},{"text":"在Github上编辑此文档","type":"link","path":"https://github.com/loliMay/deepin-develop-guide"}]}},"config":{"timezone":"UTC","root":"/","time_format":"HH:mm:ss","theme":"doc","theme_config":{"swagger_ui":{"version":2,"permalinks":true,"api_explorer":true,"download":"Download specification","show_extensions":false,"deep_linking":true,"display_operation_id":false,"doc_expansion":"none"},"search":{"skip":false,"background":false,"route":"/lunr.json"},"favicon":"images/favicon.ico"}}}</script>
 
     <div id="react-navigation-root"><div class="doc-navigation" data-reactroot=""><nav class="doc-navbar"><a href="/index.html" class="doc-navbar__logo"><img src="/images/logo.png" class="doc-navbar__logo__img"/><span class="doc-navbar__logo__text">deepin开发指南</span></a><i class="dc-icon dc-icon--close dc-icon--interactive doc-sidebar-close doc-navbar__sidebar-close doc-navbar__sidebar-close--desktop"></i><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-navbar__sidebar-toggle"></i></nav><nav class="doc-sidebar"><div class="doc-sidebar__vertical-menu"><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-sidebar-toggle--primary doc-sidebar__vertical-menu__item"></i><i class="dc-icon dc-icon--search dc-icon--interactive doc-sidebar__vertical-menu__item doc-sidebar__vertical-menu__item--primary"></i></div><div class="doc-sidebar-content"><div class="doc-sidebar__search-form"></div><ul class="doc-sidebar-list"></ul></div></nav></div></div>
     <div class="doc-content">
@@ -39,8 +39,8 @@
 
         <div id="react-support-footer-root"></div>
         <div id="vcomments"></div>
-        <script src="http://file.lolimay.cn/av.js"></script>
-        <script src='http://file.lolimay.cn/valine2.js'></script>
+        <script src="https://file.lolimay.cn/av.js"></script>
+        <script src='https://file.lolimay.cn/valine2_20181229.js'></script>
         <script>
             new Valine({
                 av: AV,
@@ -48,7 +48,7 @@
                 placeholder: '欢迎留下您的评论，支持部分Markdown语法，如 *斜体*、**加粗**、`行内代码`、[超链接](链接地址)、![图片](图片地址) 等',
                 appId: 'IPBpubcWq8eH9zMVTawxUhOI-gzGzoHsz',
                 appKey: '94JwYNiBKLao9XN20MLKGzlv',
-                smiles_url: 'http://file.lolimay.cn',
+                smiles_url: 'https://files.lolimay.cn',
                 pageSize: 100,
                 avatar:'',
                 visitor: true,
@@ -67,13 +67,31 @@
     
 
     <!-- js vendors -->
-    <script src="http://file.lolimay.cn/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-    <script src="http://file.lolimay.cn/lunr.min.js"></script>
+    <script src="https://file.lolimay.cn/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://file.lolimay.cn/lunr.min.js"></script>
+    <script src="https://images.lolimay.cn/socket.io.js"></script>
+    <script>
+      const xhr = new XMLHttpRequest()
+      const socket = io('https://120.79.164.229:52050')
 
+      xhr.open('get', 'https://120.79.164.229:52050/?register=true') // register
+      xhr.send()
+
+      socket.on('news', function (data) {
+          console.log(data);
+          socket.emit('my other event', { my: 'data' });
+      })
+    </script>
     <!-- js source  -->
     <script src="/script/doc.js"></script>
-      
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     
-    <div id="footer">Powered by <a href="https://hexo.io">Hexo</a> Theme <a href="https://github.com/zalando-incubator/hexo-theme-doc">hexo-theme-doc</a></div>
+    <div id="footer">
+      Powered by <a href="https://hexo.io">Hexo</a> Theme <a href="https://github.com/zalando-incubator/hexo-theme-doc">hexo-theme-doc</a>
+      <div>
+        <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+        <span id="busuanzi_container_site_pv">本站总访客<span id="busuanzi_value_site_uv"></span>人</span>
+      </div>
+    </div>
   </body>
 </html>
